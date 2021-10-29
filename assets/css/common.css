@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.noto {
+    font-family: 'Noto Sans KR', Arial, Helvetica, sans-serif ;
+}
+
+.iropke {
+    font-family: 'Iropke Batang', Arial, Helvetica, sans-serif ;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Iropke Batang', Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family: 'Noto Sans KR', Arial, Helvetica, sans-serif ;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+.wrap{
+    width: 100%;
+    box-sizing: border-box;
+}
+input[type="submit"]{
+    cursor: pointer;
+}
+
+input {
+    border: 1px solid #dedede;
+}
+.bx-wrapper{
+    box-shadow: none;
+    border: none;
+    background: none;
+}
+.bx-pager{
+    display: none;
+}
+
+html{
+    position: relative;
+}
+
+body{
+    position: absolute;
+    background-image: url(../image/bg01.png), url(../image/bg01.png), url(../image/bg01.png);
+    background-position: right -600px top 300px, left -900px top 1400px, left -500px top 3300px;
+    background-repeat: no-repeat;
+    width: 100%;
+    z-index: -1;
+}
