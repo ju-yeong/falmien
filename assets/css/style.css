@@ -136,52 +136,79 @@ header .open{
     background: url(../image/main_visual03.png) center no-repeat ;
 }
 
-.slider .text {
-    margin: 0 100px;
+.bx-controls-direction{
+    position: absolute;
+    bottom: 93px;
+    left: -2px;
+}
+.bx-wrapper .bx-controls-direction a{
+    position: relative;
+    color: transparent;
+    background-color: #fff;
+    padding: 25px 18px;
+    transition: all 0.2s;
+    left: 0;
+    right: 0;
+}
+.bx-controls-direction a:last-child::after{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 15px;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #b2b2b2;
+}
+.bx-controls-direction .bx-prev{
+    background: url(../image/visual_arr_left_off_black.png) no-repeat center;
+    background-size: 12px;
+}
+.bx-controls-direction .bx-prev:hover,
+.bx-controls-direction .bx-prev:focus
+{
+    background: url(../image/visual_arr_left_on_black.png) no-repeat center;
+    background-size: 14px;
+    background-color: #fff;
+}
+.bx-controls-direction .bx-next{
+    background: url(../image/visual_arr_right_off_black.png) no-repeat center;
+    background-size: 12px;
+}
+.bx-controls-direction .bx-next:hover,
+.bx-controls-direction .bx-next:focus
+{
+    background: url(../image/visual_arr_right_on_black.png) no-repeat center;
+    background-size: 14px;
+    background-color: #fff;
 }
 
+.mobile-banner{
+    background: url(../image/main_visual_phone.png) no-repeat center;
+    background-size: cover;
+    width: 92%;
+    margin: 0 auto;
+    height: 790px;
+}
+
+.main-visual .text{
+    position: absolute;
+    left: 200px;
+    top: 0;
+    width: 450px;
+    z-index: 5;
+}
 .banner_text {
     color: white;
     position: absolute;
     top: 300px;
 }
 
-.banner_text h2 {
+.main-visual h2 {
+    font-size: 45px;
     margin-bottom: 30px;
+    font-weight: 300;
 }
-.bx-controls-direction{
-    position: absolute;
-    bottom: 60px;
-    /* padding: 30px 20px; */
-}
-.bx-wrapper .bx-controls-direction a{
-    position: unset;
-    color: transparent;
-    width: 65px;
-    height: 67px;
-    background-color: #fff;
-}
-.bx-controls-direction .bx-prev{
-    background: url(../image/visual_arr_left_off_black.png) no-repeat center;
-    background-size: contain;
-}
-.bx-controls-direction .bx-prev:hover,
-.bx-controls-direction .bx-prev:focus
-{
-    background: url(../image/visual_arr_left_on_black.png) no-repeat center;
-    background-size: contain;
-}
-.bx-controls-direction .bx-next{
-    background: url(../image/visual_arr_right_off_black.png) no-repeat center;
-    background-size: contain;
-}
-.bx-controls-direction .bx-next:hover,
-.bx-controls-direction .bx-next:focus
-{
-    background: url(../image/visual_arr_right_on_black.png) no-repeat center;
-    background-size: contain;
-}
-
 /* \\ banner */
 
 /* content menu */
@@ -207,8 +234,7 @@ header .open{
 
 .content_menu li {
     text-align: left;
-    margin-right: 2%;
-    width: 23%;
+    width: 20%;
 } 
 
 .content_menu img {
@@ -421,14 +447,16 @@ header .open{
 
 .locationInput .container01 {
     width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #dedede;
+    padding: 20px;
 }
 
 .locationInput .container01 input {
-    height: 58px;
-    line-height: 58px;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
+    border: none;
+    width: 35px;
 }
 
 .locationInput .container02 {
@@ -513,7 +541,7 @@ header .open{
 /* content05 */
 
 .content05 {
-    width: 90%;  /*임시*/
+    width: 92%;
     text-align: center;
 }
 
@@ -578,6 +606,7 @@ header .open{
     resize: none;
     padding: 10px 10px;
     border: 1px solid #dedede;
+    box-sizing: border-box;
 }
 
 .input02 .inputBox textarea:focus {
@@ -695,7 +724,7 @@ footer span {
     }
 
     .bn02 .bn02Text {
-        padding: 50px 0;
+        padding: 100px 0;
     }
 
     .bn02::after {
@@ -814,9 +843,22 @@ footer span {
     .input02{
         width: 100%;
     }
+    
+    .container02{
+        width: 100%;
+    }
+    .locationInput .btn{
+        background: none;
+        width: 100%;
+        max-width: 120px;
+        padding: 0;
+    }
 }
 @media(max-width: 540px){
 
+    .mobile-banner{
+        height: 450px;
+    }
     .container .content02 {
         padding: 50px 0;
     }
@@ -844,6 +886,17 @@ footer span {
 
     .differance ul li:nth-child(2)::after {
         display: none;
+    }
+
+    .bn01:after{
+        width: 100%;
+        height: 111px;
+    }
+    .bn01Text img{
+        display: none;
+    }
+    .bn01Text p{
+        margin-top: 0;
     }
 }
 
