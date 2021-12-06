@@ -105,6 +105,9 @@ header h1 img {
     height: 858px;
     background: url(../image/main_visual01.png) center no-repeat ;
 }
+.mobile-banner{
+    display: none;
+}
 
 .wrap_1 {
     margin: 0 100px;
@@ -721,6 +724,12 @@ body{
 }
 
 @media(max-width: 540px){
+    .main_image{
+        display: none;
+    }
+    .mobile-banner{
+        display: block;
+    }
 
     .container .content02 {
         padding: 50px 0;

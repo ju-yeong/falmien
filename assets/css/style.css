@@ -189,11 +189,12 @@ header .open{
     width: 92%;
     margin: 0 auto;
     height: 790px;
+    display: none;
 }
 
 .main-visual .text{
     position: absolute;
-    left: 200px;
+    left: 45px;
     top: 0;
     width: 450px;
     z-index: 5;
@@ -542,6 +543,7 @@ header .open{
 
 .content05 {
     width: 92%;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -856,7 +858,11 @@ footer span {
 }
 @media(max-width: 540px){
 
+    .bx-wrapper{
+        display: none;
+    }
     .mobile-banner{
+        display: block;
         height: 450px;
     }
     .container .content02 {
