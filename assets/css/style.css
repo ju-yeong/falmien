@@ -277,6 +277,7 @@ header .open{
 /* content02 */
 
 .content02 {
+    width: 92%;
     margin: 0 auto;
     padding: 50px 0;
     background: url("../image/Difference_bg.png") no-repeat center;
